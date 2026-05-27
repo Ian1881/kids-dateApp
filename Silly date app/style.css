@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #f387ee, #923583);
+  color: #f8fafc;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.proposal-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  min-height: 150px;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-si {
+  background: #f43f5e;
+  color: #ffffff;
+  font-size: 1.55rem;
+  padding: 16px 52px;
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.4);
+}
+
+.btn-si:hover {
+  background: #fb7185;
+}
+
+.btn-no {
+  background: #475569;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+}
+
+.btn-no:hover {
+  background: #64748b;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.math-problem {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 28px;
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+}
+
+.math-variable {
+  font-style: italic;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.math-equation {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 12px;
+  letter-spacing: 2px;
+  color: #f1f5f9;
+}
+
+.math-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.math-form label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.math-form input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 1.1rem;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.math-form input:focus {
+  border-color: #38bdf8;
+}
+
+.btn-validate {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-validate:hover {
+  background: #3b82f6;
+}
+
+.success-card h1 {
+  font-size: 3.2rem;
+  color: #f43f5e;
+  margin-bottom: 12px;
+}
+
+.success-card p {
+  font-size: 1.5rem;
+}
+
+.heart-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  animation: pulse 1.5s infinite;
+}
+
+.dramatic-card {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.dramatic-title {
+  font-size: 1.8rem;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.dramatic-text {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.soldier-image-container {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(239, 68, 68, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  background: #000000;
+}
+
+.soldier-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

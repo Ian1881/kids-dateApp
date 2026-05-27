@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Te gustaría?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <section class="screen view-propuesta" id="screen-propuesta">
+        <h1 class="proposal-title">¿Te gustaría salir conmigo hoy?</h1>
+        <div class="button-group">
+          <button type="button" class="btn btn-si" id="btn-si">SÍ</button>
+          <button type="button" class="btn btn-no" id="btn-no">No</button>
+        </div>
+      </section>
+
+      <section class="screen view-math hidden" id="screen-math">
+        <div class="card">
+          <h2>Para decir que "No", por favor resuelve este problema:</h2>
+          <p class="subtitle">
+            Resuelve el siguiente problema algebraico para habilitar la
+            negativa:
+          </p>
+
+          <div class="math-problem">
+            <p>
+              Encuentra el valor entero de
+              <span class="math-variable">x</span> en:
+            </p>
+            <div
+              class="math-equation"
+              style="font-size: 1.6rem; letter-spacing: 1px"
+            >
+              <span style="border-bottom: 2px solid; padding-bottom: 2px"
+                >√(3<sup>2</sup> × √(3<sup>4</sup>) × 3<sup>2</sup>)</span
+              >
+              × 3<sup>-1</sup> + x = 26
+            </div>
+          </div>
+
+          <form class="math-form" id="math-form" autocomplete="off">
+            <label for="math-answer">Tu respuesta para x:</label>
+            <input
+              type="text"
+              id="math-answer"
+              placeholder="Escribe tu resultado numérico"
+              required
+            />
+            <button type="submit" class="btn btn-validate">
+              Validar Respuesta
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen view-victoria hidden" id="screen-victoria">
+        <div class="card success-card">
+          <div class="heart-icon">💖</div>
+          <h1>¡Respuesta correcta!🥰</h1>
+          <p>
+            Envía un mensaje directo con el nombre del restaurante más caro que
+            conozcas, y la hora que quieres que pase por ti baby!🚲
+          </p>
+        </div>
+      </section>
+
+      <section class="screen view-heartbreak hidden" id="screen-heartbreak">
+        <div class="card dramatic-card">
+          <div class="soldier-image-container">
+            <img
+              src="./images/soldado-caido.png"
+              alt="Soldado caído en combate"
+              class="soldier-img"
+              id="img-soldier"
+            />
+          </div>
+
+          <h1 class="dramatic-title">
+            Felicidades, ganaste... ¿pero a qué costo?
+          </h1>
+          <p class="dramatic-text">
+            Toma una captura de pantalla de esto y envíaselo a la persona que te
+            envió el link para terminar de destrozarles las esperanzas y el
+            corazón. Solo quería una cita contigo... pero decidiste usar tu
+            intelecto superior para la destrucción.<br />Enhorabuena
+            genio!👏👏👏.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
